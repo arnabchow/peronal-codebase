@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myweb-deploy
+spec:
+  replicas: 3
+  selector: 
+    matchLabels:
+       env: testing
+  template:
+    metadata:
+      name: myweb-pod
+      labels:
+        env: testing
+        region: IN
+    spec:
+      containers:
+      - name: myweb-con
+        image: wordpress:5.1.1-php7.3-apache             
+        volumeMounts:
+        - name: web-vol1
+          mountPath: /var/www/html
+      volumes:
+      - name: web-vol1
+        persistentVolumeClaim:
+          claimName: web-pvc
+

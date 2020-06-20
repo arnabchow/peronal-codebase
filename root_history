@@ -1,0 +1,917 @@
+    1  ip a
+    2  poweroff 
+    3  ip a
+    4  ping google.com
+    5  systemctl stop firewalld.service 
+    6  ip a
+    7  systemctl status sshd
+    8  iptables -L
+    9  poweroff 
+   10  ip a
+   11  ping google.com
+   12  ip a
+   13  firefox &
+   14  cd /etc/yum.repos.d/
+   15  ll
+   16  vi docker.repo
+   17  cd
+   18  yum install docker-ce
+   19  yum install docker-ce --nobest
+   20  systemctl start docker.service 
+   21  systemctl enable docker.service 
+   22  docker version 
+   23  firewall-cmd --zone=public --add-masquerade --permanent 
+   24  firewall-cmd --zone=public --add-port=80/tcp
+   25  firewall-cmd --zone=public --add-port=443/tcp
+   26  firewall-cmd --reload 
+   27  systemctl restart docker.service 
+   28  poweroff 
+   29  cd /var/www/html/
+   30  git clone https://github.com/arnabchow/devopsalTest.git .
+   31  ll
+   32  systemctl status httpd
+   33  ll
+   34  iptables -L
+   35  getenforce 
+   36  systemctl stop firewalld.service 
+   37  ll
+   38  rm -rf *
+   39  ls -la
+   40  rm -rf .git
+   41  ls -la
+   42  git clone https://github.com/arnabchow/devopsalTest.git .
+   43  ll
+   44  git log
+   45  git reset eab2bb9b47 web.html
+   46  git checkout -- web.html
+   47  git log
+   48  mkdir /myweb
+   49  docker history httpd:latest 
+   50  docker run httpd
+   51  docker run -dit httpd
+   52  docker exec 9a6f44 bash
+   53  pwd
+   54  docker ps
+   55  docker -exec 9a6f44 bash
+   56  docker exec -it 
+   57  docker exec -it 9a6f44 bash
+   58  docker ps |grep web1
+   59  if docker ps |grep web1; then echo "aleary running"; else echo "new lainch"; fi
+   60  ll
+   61  ./ngrok http 8080
+   62  cd /devopsrepo/
+   63  git status
+   64  git checkout master
+   65  git merge dev1
+   66  cat index.html 
+   67  git push 
+   68  git status 
+   69  git status |grep 'origin/master'
+   70  git status |grep 'origin/dev1'
+   71  docker ps
+   72  curl devos
+   73  curl 192.168.56.108
+   74  if curl 192.168.56.108; then echo "webpage is running"; else echo "run prod job"; fi
+   75  vim .git/hooks/post-commit 
+   76  git checkout dev1
+   77  cat index.html 
+   78  cat >> index.html 
+   79  git commit index.html -m "seventh dev1"
+   80  git push https://arnabchowdhury83@gmail.com:roychowdhury83@github.com/arnabchow/gitrepo1.git
+   81  vim .git/hooks/post-commit 
+   82  git log
+   83  git push
+   84  cat index.html 
+   85  cat >> index.html 
+   86  cat index.html 
+   87  git commit index.html -m "eighth dev1"
+   88  history 
+   89  git remote set-url origin https://arnabchowdhury83@gmail.com:roychowdhury83@github.com/arnabchow/gitrepo1.git
+   90  git status
+   91  git push 
+   92  git remote -v
+   93  git remote add origin https://github.com/arnabchow/gitrepo1.git
+   94  git push 
+   95  git remote -h
+   96  git remote set-url --delete origin https://arnabchowdhury83@gmail.com:roychowdhury83@github.com/arnabchow/gitrepo1.git
+   97  git remote -v
+   98  git remote remove origin
+   99  git remote -v
+  100  git remote add origin https://github.com/arnabchow/gitrepo1.git
+  101  git push 
+  102  git push -u origin master
+  103  git push --set-upstream origin master
+  104  git push 
+  105  git status 
+  106  git push --set-upstream origin dev1
+  107  git checkout master
+  108  git push 
+  109  git push --set-upstream origin master
+  110  mkdir /repo1
+  111  cd /repo1/
+  112  rm -rf /devopsrepo
+  113  git clone https://github.com/arnabchow/gitrepo1.git
+  114  git status
+  115  git init 
+  116  git status 
+  117  ll
+  118  ls -la
+  119  rm -rf .git
+  120  cd gitrepo1/
+  121  git status
+  122  git checkout dev1
+  123  git status
+  124  git log --oneline
+  125  cat .git/hooks/post-commit
+  126  vi .git/hooks/post-commit
+  127  git status
+  128  ls
+  129  cat index.html 
+  130  cat >> index.html 
+  131  git status
+  132  git add
+  133  git add .
+  134  git status
+  135  git commit index.html -m "nineth dev1"
+  136  chown a+x .git/hooks/post-commit 
+  137  chmod a+x .git/hooks/post-commit 
+  138  git log --oneline
+  139  cat >> index.html 
+  140  git commit index.html -m "tenth dev1"
+  141  git config --global credential.helper 'cache --timeout=3600'
+  142  git config --global credential.helper cache
+  143  git push 
+  144  git config --global --edit
+  145  git push 
+  146  git status
+  147  git log --oneline
+  148  git log -h
+  149  git log --graph --decorate
+  150  git log --graph --decorate --oneline
+  151  git status
+  152  git checkout master 
+  153  cat index.html 
+  154  git merge dev1
+  155  git push 
+  156  git status
+  157  git checkout dev1
+  158  ls
+  159  git log --oneline
+  160  cat index.html 
+  161  git checkout master
+  162  ls
+  163  cat index.html 
+  164  git checkout dev1
+  165  vi index.html 
+  166  docker ps
+  167  docker rm -f devos
+  168  docker ps
+  169  docker ps -a
+  170  cat .git/hooks/post-commit 
+  171  git status 
+  172  git commit index.html -m "testing page"
+  173  git config --global user.name "Arnab Chowdhury"
+  174  git config --global user.email arnabchowdhury83@gmail.com
+  175  git config --global edit
+  176  git config --global --edit
+  177  git push 
+  178  git checkout master 
+  179  git push 
+  180  whereis git
+  181  pwd
+  182  git log --oneline
+  183  cat >> index.html 
+  184  git status
+  185  vi index.html 
+  186  git status
+  187  git checkout dev1 
+  188  vi index.html 
+  189  git status 
+  190  git add .
+  191  git status 
+  192  git log --oneline
+  193  git commit index.html -m "final dev1"
+  194  git status 
+  195  mkdir /devopsrepo
+  196  cd /devopsrepo/
+  197  git init 
+  198  ls -la
+  199  cat > index.html
+  200  cat index.html 
+  201  git status
+  202  git add .
+  203  git status
+  204  git commit index.html -m "first"
+  205  git branch 
+  206  git branch dev1
+  207  git branch 
+  208  git status
+  209  git log
+  210  git checkout dev1
+  211  git status
+  212  ls
+  213  git status
+  214  cat >> index.html 
+  215  git status
+  216  git add .
+  217  git status
+  218  git commit index.html -m "sec dev1"
+  219  git log --online
+  220  git log -h
+  221  git log 
+  222  git log --oneline
+  223  git checkout master
+  224  git log --oneline
+  225  git remote add origin https://github.com/arnabchow/gitrepo1.git
+  226  git push -u origin master
+  227  git push -u origin dev1
+  228  git status
+  229  cat index.html 
+  230  git checkout dev1
+  231  cat index.html 
+  232  cat >> index.html 
+  233  git add .
+  234  git status
+  235  git commit index.html -m "third dev1"
+  236  git log
+  237  git push 
+  238  git log --oneline
+  239  git checkout master
+  240  git merge dev1
+  241  git log --oneline
+  242  cat index.html 
+  243  ls -a
+  244  vi .git/hooks/post-commit
+  245  mkdir /web1
+  246  cat .git/hooks/post-commit 
+  247  git checkout dev1
+  248  vim .git/hooks/post-commit 
+  249  cd .git/
+  250  ll
+  251  cd branches/
+  252  ll
+  253  cd ..
+  254  cd hooks/
+  255  ll
+  256  vim post-commit 
+  257  docker ps
+  258  docker network ls
+  259  docker rm -f $(docker ps -a -q)
+  260  docker ps
+  261  docker ps -a
+  262  docker run -dit --network host httpd
+  263  docker inspect ffbd935009
+  264  docker ps
+  265  docker ps -a
+  266  docker rm -f $(docker ps -a -q)
+  267  systemctl stop httpd.service 
+  268  docker run -dit --network host httpd
+  269  docker ps
+  270  docker inspect 53427f421df
+  271  curl 192.168.56.108
+  272  history 
+  273  docker rm -f $(docker ps -a -q)
+  274  cat post-commit 
+  275  cd ..
+  276  git status 
+  277  history 
+  278  curl 192.168.56.108
+  279  docker ps
+  280  git log
+  281  curl 192.168.56.108
+  282  git status -m
+  283  git status 
+  284  cat >> index.html 
+  285  git status 
+  286  git add
+  287  git add .
+  288  git status 
+  289  git commit index.html -m "fouth dev1"
+  290  cd .git/hooks/
+  291  ll
+  292  chmod a+x post-commit 
+  293  ll
+  294  cd -
+  295  cat index.html 
+  296  cat >> index.html 
+  297  git commit index.html -m "fifth dev1"
+  298  vim .git/hooks/post-commit 
+  299  git checkout master
+  300  git log --oneline
+  301  git push 
+  302  git status 
+  303  git push 
+  304  git checkout dev1
+  305  cat >> index.html 
+  306  git commit index.html -m "sixth dev1"
+  307  mkdir /web2
+  308  docker ps
+  309  cd 
+  310  ./ngrok http 8082
+  311  history 
+  312  ./ngrok http 8082
+  313  cd /etc/yum.repos.d/
+  314  ll
+  315  cat redhat.repo
+  316  cat jenkins.repo 
+  317  cat docker.repo 
+  318  history 
+  319  ll
+  320  cat redhat.repo 
+  321  cat jenkins.repo
+  322  history 
+  323  docker ps
+  324  docker image
+  325  docker images
+  326  docker pull mitting/apache-php-web
+  327  docker images
+  328  docker run -it mitting/apache-php-web
+  329  docker ps
+  330  docker ps -a
+  331  docker rm -f f098c74c35db
+  332  docker run -dit --name test1 mitting/apache-php-web 
+  333  docker exec bash test1 
+  334  docker exec -it bash test1 
+  335  docker exec -it test1 bash
+  336  docker inspect test1
+  337  curl 172.17.0.3
+  338  docker attach test1
+  339  docker run -it --name test2 mitting/apache-php-web 
+  340  docker rm -f $(docker ps -a -q)
+  341  docker history mitting/apache-php-web:latest 
+  342  docker history httpd:latest 
+  343  docker run -dit --name test1 mitting/apache-php-web 
+  344  docker exec -it test1 bash
+  345  docker ps
+  346  docker rm -f $(docker ps -a -q)
+  347  docker run -it --name phpweb centos:7
+  348  curl 172.17.0.2
+  349  curl 172.17.0.2/index.php
+  350  docker ps
+  351  docker commit phpweb arnab83/php-apache-web
+  352  docker images
+  353  docker run -dit --name test1 arnab83/php-apache-web
+  354  docker inspect test1 
+  355  docker run -dit -p 8085:80--name test2 arnab83/php-apache-web
+  356  docker run -dit -p 8085:80 --name test2 arnab83/php-apache-web
+  357  docker images
+  358  docker login
+  359  docker push arnab83/php-apache-web
+  360  docker rm -f $(docker ps -a -q)
+  361  docker history 
+  362  docker rm -f $(docker ps -a -q)
+  363  df -h
+  364  vgs
+  365  lvs
+  366  ls 
+  367  pwd
+  368  ls /
+  369  mkdir myweb
+  370  cd myweb/
+  371  pwd
+  372  cd ..
+  373  mkdir myrepo
+  374  echo "# repo1" >> README.md
+  375  git init
+  376  git add README.md
+  377  git commit -m "first commit"
+  378  git remote add origin https://github.com/arnabchow/repo1.git
+  379  git push -u origin master
+  380  date
+  381  git config --global credential.helper cache
+  382  git config --global credential.helper 'cache --timeout=3600'
+  383  git push -u origin master
+  384  git status
+  385  cd myrepo/
+  386  git status
+  387  cd ..
+  388  ls -la
+  389  rm -rf .git
+  390  git status
+  391  cd myrepo/
+  392  git init 
+  393  git status
+  394  git remote add origin https://github.com/arnabchow/repo1.git
+  395  git push -u origin master
+  396  git push
+  397  git remote -v
+  398  git remote remove origin
+  399  git remote -v
+  400  git remote add origin https://github.com/arnabchow/repo1.git
+  401  git push -u origin master
+  402  rm -rf  *
+  403  ls -la
+  404  rm -rf  .git
+  405  git clone https://github.com/arnabchow/repo1.git
+  406  ll
+  407  cd repo1/
+  408  ll
+  409  vim index.php
+  410  git add index.php 
+  411  git status 
+  412  git commit index.php -m "first"
+  413  git status 
+  414  git log
+  415  git push 
+  416  vi .git/hooks/post-commit
+  417  chmod a+x .git/hooks/post-commit 
+  418  vi index.php 
+  419  git add index.php 
+  420  git status 
+  421  git commit index.php -m "sec"
+  422  git checkout -b dev
+  423  git status 
+  424  ls
+  425  cat index.php 
+  426  git config --global credential.helper cache
+  427  git config --global credential.helper 'cache --timeout=3600'
+  428  git push
+  429  git push --set-upstream origin dev
+  430  git status 
+  431  ls /root/
+  432  docker images
+  433  docker network ls
+  434  cd /root/myweb/
+  435  ll
+  436  curl -i 192.168.56.108
+  437  cd -
+  438  mkdir /root/myweb_final
+  439  docker images
+  440  curl -i 192.168.56.108/index.php
+  441  curl -i -w "%{http_code}" 192.168.56.108/index.php
+  442  curl -o -w "%{http_code}" 192.168.56.108/index.php
+  443  curl -w "%{http_code}" 192.168.56.108/index.php
+  444  curl -o /dev/null -w "%{http_code}" 192.168.56.108/index.php
+  445  curl -o /dev/null -s -w "%{http_code}" 192.168.56.108/index.php
+  446  cat index.php 
+  447  git log
+  448  git log --oneline
+  449  git status 
+  450  vim index.php 
+  451  vi .git/hooks/post-commit 
+  452  git status 
+  453  git add .
+  454  git status 
+  455  git commit index.php -m "third"
+  456  vim index.php 
+  457  git status 
+  458  git add .
+  459  git status 
+  460  git commit index.php -m "fourth"
+  461  git log --oneline
+  462  vi index.php 
+  463  git add .
+  464  git commit index.php -m "fifth"
+  465  curl -o /dev/null -s -w "%{http_code}" 192.168.56.108/index.php
+  466  x=`curl -o /dev/null -s -w "%{http_code}" 192.168.56.108/index.php`
+  467  echo $x
+  468  if [[ $x=200 ]]; then echo "all good"; else echo "not ok"; fi
+  469  vi index.php 
+  470  git add .
+  471  git status 
+  472  git commit index.php -m "modify on sixth"
+  473  vi index.php 
+  474  git add .
+  475  git status 
+  476  git commit index.php -m "modify on seventh"
+  477  git checkout master
+  478  git push 
+  479  cat index.php 
+  480  git checkout dev
+  481  cat index.php 
+  482  vim index.php 
+  483  git add .
+  484  git status 
+  485  git commit index.php -m "ready for test"
+  486  pwd
+  487  ls -l
+  488  ls -a
+  489  pwd
+  490  ls -a
+  491  cd
+  492  ln -s /root/myrepo/repo1/ /repo
+  493  cd /repo
+  494  pwd
+  495  ls
+  496  ls -a
+  497  ls -ld /root/myrepo/repo1/
+  498  git status
+  499  ls -l
+  500  ls -la
+  501  git checkout master 
+  502  ls -la
+  503  pwd
+  504  cd /root/myrepo/repo1/
+  505  ls -la
+  506  setfacl -m u:jenkins:rwx /root/myrepo/repo1/
+  507  cd 
+  508  cd /
+  509  ll
+  510  cd /repo1/
+  511  ll
+  512  cd /
+  513  rm -rf repo
+  514  mkdir phpweb
+  515  git clone https://github.com/arnabchow/repo1.git
+  516  cd /root/
+  517  ll
+  518  mv myrepo/repo1/.git/hooks/post-commit .
+  519  ll
+  520  rm -rf myrepo
+  521  cd /phpweb/
+  522  git clone https://github.com/arnabchow/repo1.git
+  523  mv /root/post-commit repo1/.git/hooks/
+  524  cd repo1/
+  525  ll
+  526  cat index.php 
+  527  git checkout dev
+  528  ll
+  529  cat index.php 
+  530  git push 
+  531  git checkout master 
+  532  git push
+  533  pwd
+  534  ll
+  535  pwd
+  536  git status 
+  537  git checkout dev
+  538  ll
+  539  git log --oneline
+  540  vi index.php 
+  541  git add .
+  542  git status
+  543  git commit index.php -m "bg color code"
+  544  vi index.php 
+  545  git add .
+  546  git commit index.php -m "code modified"
+  547  cd /
+  548  cd -
+  549  ./ngrok http 8080
+  550  docker ps
+  551  ./ngrok http 8085
+  552  mkdir /project
+  553  cd /project/
+  554  ll
+  555  vi Dockerfile
+  556  yum list |grep openjdk
+  557  vi Dockerfile
+  558  systemctl status jenkins.service 
+  559  cd /etc/rc.d/init.d/
+  560  ls -l
+  561  less jenkins 
+  562  cat jenkins
+  563  cd -
+  564  vi Dockerfile 
+  565  docker images
+  566  vi Dockerfile 
+  567  docker build -t jenkin:v1
+  568  docker build -t arnab83/jenkin:v1 .
+  569  vi Dockerfile 
+  570  docker build -t arnab83/jenkin:v1 .
+  571  docker images
+  572  docker run -dit -P --name jen1 arnab83/jenkin:v1 
+  573  docker ps
+  574  docker ps -a
+  575  docker images
+  576  vi Dockerfile 
+  577  systemctl status jenkins.service 
+  578  systemctl stop jenkins.service 
+  579  systemctl status jenkins.service 
+  580  /etc/rc.d/init.d/jenkins start
+  581  systemctl status jenkins.service 
+  582  docker ps -a
+  583  docker rm -f jen1
+  584  docker ps -a
+  585  docker run -dit -P --name jen1 arnab83/jenkin:v1 
+  586  docker ps -a
+  587  docker rm -f jen1
+  588  vi Dockerfile 
+  589  docker build -t arnab83/jenkin:v2 .
+  590  vi Dockerfile 
+  591  docker history arnab83/jenkin:v1 
+  592  vi Dockerfile 
+  593  yum list |grep openjdk
+  594  vi Dockerfile 
+  595  docker build -t arnab83/jenkin:v2 .
+  596  docker images
+  597  docker rmi 0cb0e0430bdb
+  598  docker rmi <none>
+  599  docker rmi -f 0cb0e0430bdb
+  600  docker images
+  601  docker run -dit -P --name jen2 arnab83/jenkin:v2 
+  602  docker ps
+  603  docker ps -a
+  604  docker rm -f $(docker ps -a -q)
+  605  docker ps -a
+  606  docker run -dit -P --name jen2 arnab83/jenkin:v2 
+  607  docker ps -a
+  608  yum list |grep openjdk
+  609  docker rm -f $(docker ps -a -q)
+  610  vi Dockerfile 
+  611  docker build -t arnab83/jenkin:v3 .
+  612  docker images
+  613  vi Dockerfile 
+  614  docker run -it centos
+  615  vi Dockerfile 
+  616  docker run -it -P --name jen2 arnab83/jenkin:v2 
+  617  vi /etc/rc.d/init.d/jenkins
+  618  systemctl stop jenkins.service 
+  619  systemctl start jenkins.service 
+  620  systemctl status jenkins.service 
+  621  /etc/init.d/jenkins status
+  622  vi Dockerfile 
+  623  docker images
+  624  docker build -t arnab83/jenkin:v3 .
+  625  docker images
+  626  docker run -it -P --name jen3 arnab83/jenkin:v3
+  627  vi /etc/rc.d/init.d/jenkins
+  628  cd /etc/init.d/functions
+  629  ls -l /etc/init.d/functions
+  630  cat /etc/init.d/functions
+  631  vi Dockerfile 
+  632  cp /etc/init.d/functions .
+  633  ll
+  634  docker build -t arnab83/jenkin:v4 .
+  635  docker images
+  636  docker run -it -P --name jen4 arnab83/jenkin:v4
+  637  docker ps
+  638  docker ps -a
+  639  /etc/init.d/jenkins status
+  640  docker run -dit -P --name jen5 arnab83/jenkin:v4
+  641  docker ps -a
+  642  docker logs jen5
+  643  vi Dockerfile 
+  644  docker logs --details jen5
+  645  docker rm -f $(docker ps -a -q)
+  646  docker ps -a
+  647  docker ps 
+  648  vi Dockerfile 
+  649  docker build -t arnab83/jenkin:v5 .
+  650  docker images
+  651  docker run -it -P --name jen5 arnab83/jenkin:v5
+  652  docker ps
+  653  docker ps -a
+  654  docker logs jen5 
+  655  vi Dockerfile 
+  656  docker build -t arnab83/jenkin:v5 .
+  657  docker images
+  658  docker rmi -f da90d4857e1d
+  659  docker 
+  660  docker run -it -P --name jen5 arnab83/jenkin:v5
+  661  docker run -it -P --name jen6 arnab83/jenkin:v5
+  662  docker ps
+  663  docker inspect jen6 
+  664  docker ps
+  665  curl 172.17.0.2:32777
+  666  docker rm -f $(docker ps -a -q)
+  667  docker images
+  668  docker images -q
+  669  docker images |grep -i jenki
+  670  docker rmi -f $(docker images |grep -i jenki)
+  671  docker images |grep -i jenki
+  672  docker images
+  673  docker rmi arnab83/jenkin
+  674  docker rmi -f arnab83/jenkin
+  675  docker rmi -f 14195d642621
+  676  docker images
+  677  docker pull jenkins/jenkins:lts
+  678  docker images
+  679  docker history jenkins/jenkins
+  680  docker history jenkins/jenkins:lts 
+  681  cd /project/
+  682  ll
+  683  cat Dockerfile 
+  684  docker ps
+  685  docker ps -a
+  686  docker ps
+  687  systemctl status jenkins.service 
+  688  cat Dockerfile 
+  689  systemctl status jenkins.service 
+  690  /etc/rc.d/init.d/jenkins staus
+  691  /etc/rc.d/init.d/jenkins status
+  692  systemctl status jenkins.service 
+  693  /etc/rc.d/init.d/jenkins status
+  694  vim Dockerfile 
+  695  cat /home/Dockerfile-orig 
+  696  docker ps
+  697  docker inspect test4
+  698  docker ps
+  699  curl 172.17.0.2:32782
+  700  cd /project/
+  701  docker images
+  702  vi Dockerfile 
+  703  cp Dockerfile /home/Dockerfile-orig
+  704  vi Dockerfile 
+  705  cat Dockerfile 
+  706  docker build -t jen:v1 .
+  707  vi Dockerfile 
+  708  docker images
+  709  docker build -t jen:v2 .
+  710  docker rmi -f 6efcd59b73ea
+  711  docker images
+  712  docker ps -a
+  713  docker rm -f 1d0b0a1f5906
+  714  docker ps -a
+  715  docker ps 
+  716  docker images
+  717  docker run -it -P --name test1 jen:v2 
+  718  docker build -t jen:v3 .
+  719  docker images
+  720  docker run -it -P --name test3 jen:v3 
+  721  docker ps
+  722  docker ps -a
+  723  vi Dockerfile 
+  724  docker build -t jen:v4 .
+  725  docker images
+  726  docker run -it -P --name test4 jen:v4 
+  727  docker ps -a
+  728  docker rm -f test4
+  729  docker run -it -P --name test4 jen:v4 
+  730  docker rm -f test4
+  731  vi Dockerfile 
+  732  docker rmi -f jen:v4 
+  733  docker image
+  734  docker images
+  735  docker build -t jen:v4 .
+  736  docker run -it -P --name test4 jen:v4 
+  737  getenforce 
+  738  setenforce 0
+  739  getenforce 
+  740  ping google.com
+  741  docker version 
+  742  history 
+  743  curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  744  chmod +x /usr/local/bin/docker-compose
+  745  docker-compose version
+  746  yum install git
+  747  df -h
+  748  cd /run/media/root/RHEL-8-0-0-BaseOS-x86_64/AppStream/
+  749  cd ../BaseOS/
+  750  cd
+  751  vim /etc/yum.repos.d/
+  752  vim /etc/yum.repos.d/redhat.repo 
+  753  vim /etc/yum.repos.d/docker.repo 
+  754  yum install git
+  755  cd -
+  756  vim /etc/yum.repos.d/redhat.repo 
+  757  cd ../AppStream/
+  758  pwd
+  759  vim /etc/yum.repos.d/redhat.repo 
+  760  cd
+  761  yum install git
+  762  git version
+  763  ip a
+  764  yum install httpd
+  765  systemctl start httpd
+  766  ip a
+  767  date
+  768  wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+  769  rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+  770  yum install jenkins
+  771  yum list |grep openjdk
+  772  yum install java-11-openjdk.x86_64
+  773  systemctl start jenkins.service 
+  774  systemctl enable jenkins.service 
+  775  systemctl status jenkins.service 
+  776  cat /var/lib/jenkins/secrets/initialAdminPassword
+  777  id jenkins
+  778  setfacl -m -u jenkins:rwx /var/www/html/
+  779  setfacl -u jenkins:rwx /var/www/html/
+  780  setfacl --help
+  781  man setfacl
+  782  setfacl -m u:jenkins:rwx /var/www/html/
+  783  ip a
+  784  cd /var/www/html/
+  785  ll
+  786  rm -rf *
+  787  cd
+  788  ll
+  789  unzip ngrok-stable-linux-amd64.zip 
+  790  ll
+  791  ./ngrok http 8080
+  792  docker images
+  793  docker pull httpd
+  794  docker images
+  795  docker run -dit --name web1 httpd
+  796  docker inspect web1 
+  797  systemctl status firewalld.service 
+  798  systemctl stop firewalld.service 
+  799  docker rm -f $(docker ps -a -q)
+  800  systemctl start firewalld.service 
+  801  systemctl status firewalld.service 
+  802  docker run -dit --name -p 8081:80 web1 httpd
+  803  systemctl restart docker.service 
+  804  docker run -dit --name -p 8081:80 web1 httpd
+  805  docker image
+  806  docker images
+  807  docker run -dit --name  web1 httpd
+  808  docker inspect web1 
+  809  docker ps 
+  810  docker run -dit -p 8081:80 --name web2 httpd
+  811  ip a
+  812  history 
+  813  firewall-cmd --zone=public --add-port=8080/tcp
+  814  firewall-cmd --reload
+  815  systemctl restart jenkins.service 
+  816  docker ps 
+  817  docker rm -f $(docker ps -a -q)
+  818  firewall-cmd --list-ports 
+  819  firewall-cmd --permanent --add-port=8080/tcp
+  820  firewall-cmd --list-ports 
+  821  firewall-cmd --reload
+  822  docker history httpd:latest 
+  823  cat /etc/passwd
+  824  visudo 
+  825  docker -ps
+  826  docker ps
+  827  docker ps -a
+  828  history 
+  829  firewall-cmd --permanent --add-port=80/tcp
+  830  firewall-cmd --reload
+  831  firewall-cmd --list-ports 
+  832  docker ps
+  833  docker ps -a
+  834  history |less
+  835  docker ps
+  836  df -h
+  837  docker volume ls
+  838  poweroff 
+  839  ping google.com
+  840  fdisk -l
+  841  pvs
+  842  pvcreate /dev/sdb
+  843  vgs
+  844  vgextend /dev/sdb rhel
+  845  vgextend rhel /dev/sdb
+  846  vgs
+  847  df -Th
+  848  lvextend -l %FREE /dev/mapper/rhel-root
+  849  lvextend --help
+  850  vgs
+  851  lvextend -L +9.5G /dev/mapper/rhel-root
+  852  xfs_growfs /dev/mapper/rhel-root
+  853  df -Th /
+  854  xfs_growfs /
+  855  df -Th
+  856  date
+  857  yum list |grep openjdk
+  858  yum install java-11-openjdk.x86_64 -y
+  859  systemctl stop jenkins.service 
+  860  cd Downloads/
+  861  ll
+  862  ls-lrth
+  863  ls -lrth
+  864  ll
+  865  chmod a+x jenkins.war 
+  866  java -jar jenkins.war
+  867  ll
+  868  systemctl start jenkins.service 
+  869  cp jenkins.war /project/
+  870  cd /project/
+  871  ll
+  872  rm functions 
+  873  ll
+  874  cd /project/
+  875  ll
+  876  vim Dockerfile 
+  877  docker images
+  878  docker rmi -f jen*
+  879  ll
+  880  docker images
+  881  docker rmi -f jen:v*
+  882  docker rmi -f jen:v2
+  883  docker rmi -f jen:v3
+  884  docker rmi -f jen:v4
+  885  docker images
+  886  docker build -t jenkins:v1 .
+  887  docker images
+  888  vim Dockerfile 
+  889  docker build -t jenkins:v1 .
+  890  vim Dockerfile 
+  891  docker build -t jenkins:v1 .
+  892  vim Dockerfile 
+  893  docker build -t jenkins:v2 .
+  894  vim Dockerfile 
+  895  docker build -t jenkins:v1 .
+  896  df -Th
+  897  cp /home/Dockerfile-orig .
+  898  ll
+  899  cp Dockerfile-orig Dockerfile
+  900  rm Dockerfile-orig 
+  901  ll
+  902  free -g
+  903  free -h
+  904  vim Dockerfile 
+  905  docker iages
+  906  docker images
+  907  docker build -t jenkins:v1 .
+  908  vim Dockerfile 
+  909  sync && echo 3 > /proc/sys/vm/drop_caches 
+  910  free -g
+  911  free -gt
+  912  sync && echo 1 > /proc/sys/vm/drop_caches 
+  913  systemctl status docker.service 
+  914  ll
+  915  docker build -t jenkins:v1 .
+  916  reboot 
+  917  history > root_history

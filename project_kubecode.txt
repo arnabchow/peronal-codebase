@@ -1,0 +1,35 @@
+Assignment 3:
+=================
+Docker code:
+
+sudo cp * /conf
+cd /conf
+sudo docker build -t arnab83/phpweb1:v1 .
+cat my_password.txt | sudo docker login --username arnab83 --password-stdin
+sudo docker push arnab83/phpweb1:v1
+
+kube:
+-------
+
+https://github.com/arnabchow/project3P.git
+
+code:
+
+if /usr/bin/kubectl --kubeconfig /config get deployment |grep myweb-deploy
+then
+/usr/bin/kubectl --kubeconfig /config set image deploy myweb-deploy myweb-con=arnab83/phpweb1:v1 --record
+else
+/usr/bin/kubectl --kubeconfig /config create -f rs-dep.yml 
+ if /usr/bin/kubectl --kubeconfig /config get all |grep -i nodeport 
+ then
+ echo "Port Expoes"
+ else
+ /usr/bin/kubectl --kubeconfig /config expose deployment myweb-deploy --port=80 --type=NodePort
+ fi
+fi
+
+/usr/bin/kubectl --kubeconfig /config get all |grep -i nodeport\
+
+
+
+/usr/bin/kubectl --kubeconfig /config rollout undo deploy myweb-deploy
